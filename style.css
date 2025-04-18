@@ -16,6 +16,25 @@ body {
 /* =======================
    Colors (RGB, HEX, HSL, Named, color-mix)
 ======================= */
+.color-rgb {
+  color: rgb(255, 99, 71); /* RGB */
+}
+
+.color-hex {
+  background-color: #90ee90; /* HEX */
+}
+
+.color-hsl {
+  border: 2px solid hsl(200, 80%, 50%); /* HSL */
+}
+
+.color-named {
+  color: coral; /* Named color */
+}
+
+.color-mix {
+  color: color-mix(in srgb, blue 70%, red); /* New CSS method */
+}
 
 h1 {
   background-color: #aaf0d1; /* HEX */
