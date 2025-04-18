@@ -1,0 +1,277 @@
+/* =======================
+   General Styling + Variables
+======================= */
+
+:root {
+  --main-bg: #ffffff;
+  --primary-color: hsl(210, 100%, 40%);
+}
+
+body {
+  background-color: var(--main-bg, white); /* fallback */
+  color: var(--primary-color, black);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* =======================
+   Colors (RGB, HEX, HSL, Named, color-mix)
+======================= */
+
+h1 {
+  background-color: #aaf0d1;        /* HEX */
+  color: rgb(50, 50, 200);          /* RGB */
+  border: 2px solid color-mix(in srgb, red 50%, blue 50%);
+  padding: 10px;
+}
+
+h2 {
+  color: orange;                    /* Named color */
+}
+
+p.colored {
+  color: hsl(120, 100%, 25%);       /* HSL */
+}
+
+/* =======================
+   Background
+======================= */
+
+section.highlight {
+  background-color: rgba(255, 200, 0, 0.2);
+}
+
+/* =======================
+   Units (3 relative + 3 absolute)
+======================= */
+
+.unit-demo {
+  font-size: 1.5em;     /* relative */
+  padding: 2rem;        /* relative */
+  margin: 10%;          /* relative */
+
+  border-width: 3px;    /* absolute */
+  width: 10cm;          /* absolute */
+  height: 12pt;         /* absolute */
+}
+
+/* =======================
+   Box Model: Margin, Padding, Border
+======================= */
+
+/* Margin (longhand + shorthand + auto) */
+.margin-demo {
+  margin-top: 20px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+
+  margin: 20px auto; /* shorthand + auto */
+}
+
+/* Padding */
+.padding-demo {
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+
+  padding: 10px 15px;
+}
+
+/* Borders */
+.border-demo {
+  border-style: solid;
+  border-color: #333;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+/* =======================
+   Text
+======================= */
+
+.text-demo {
+  color: purple;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* =======================
+   Display
+======================= */
+
+.inline-demo {
+  display: inline-block;
+}
+
+.block-demo {
+  display: block;
+}
+
+/* =======================
+   Sizing
+======================= */
+
+.box {
+  height: 200px;
+  width: 300px;
+  max-width: 100%;
+  min-width: 150px;
+}
+
+/* =======================
+   Positioning
+======================= */
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+}
+
+.absolute-box {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+/* =======================
+   Pseudo-classes
+======================= */
+
+button:hover {
+  background-color: lightblue;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* =======================
+   Flexbox
+======================= */
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.flex-item {
+  flex: 1;
+  padding: 10px;
+  background-color: lightgreen;
+}
+
+/* =======================
+   Grid
+======================= */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+/* =======================
+   Media Query
+======================= */
+
+@media (max-width: 600px) {
+  body {
+    background-color: lightgray;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+/* =======================
+   Google Fonts (add link in <head>)
+======================= */
+
+/* Example:
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* =======================
+   CSS Selectors
+======================= */
+
+/* Class selector */
+.highlight {
+  font-weight: bold;
+}
+
+/* ID selector */
+#main-title {
+  font-size: 2rem;
+}
+
+/* Universal selector */
+* {
+  box-sizing: border-box;
+}
+
+/* Element selector */
+p {
+  line-height: 1.6;
+}
+
+/* Attribute selector */
+input[type="text"] {
+  border: 1px solid #ccc;
+}
+
+/* Selector list */
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+/* Descendant combinator */
+section p {
+  font-style: italic;
+}
+
+/* Child combinator */
+ul > li {
+  color: navy;
+}
+
+/* General sibling combinator */
+h2 ~ p {
+  color: teal;
+}
+
+/* Adjacent sibling combinator */
+h2 + p {
+  font-weight: lighter;
+}
+
+/* Combined selector */
+p.highlight {
+  background-color: #ffe;
+}
+
+/* =======================
+   :has() and Nested Selectors
+======================= */
+
+/* :has() */
+div:has(img) {
+  border: 2px dashed red;
+}
+
+/* Nested (only supported in newer browsers or SCSS preprocessors) */
+.card {
+  display: block;
+}
+.card h2 {
+  color: navy;
+}
