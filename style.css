@@ -254,6 +254,11 @@ input[type="text"] {
   border: 1px solid #ccc;
 }
 
+/* Pseudo-class selector */
+p:hover {
+  background-color: lightyellow;
+}
+
 /* Selector list */
 h1, h2 {
   margin-bottom: 10px;
@@ -283,6 +288,17 @@ h2 + p {
 p.highlight {
   background-color: #ffe;
 }
+
+/* :has() selector */
+.card:has(h2) {
+  border: 1px solid blue;
+}
+
+/* Nested selector (fallback version) */
+.card h2 {
+  color: navy;
+}
+
 
 /* =======================
    :has() and Nested Selectors
