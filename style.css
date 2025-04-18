@@ -18,10 +18,10 @@ body {
 ======================= */
 
 h1 {
-  background-color: #aaf0d1;        /* HEX */
-  color: rgb(50, 50, 200);          /* RGB */
-  border: 2px solid color-mix(in srgb, red 50%, blue 50%);
+  background-color: #aaf0d1; /* HEX */
+  color: rgb(50, 50, 200);   /* RGB */
   padding: 10px;
+  border: 2px solid black;   /* Adds a simple black border */
 }
 
 h2 {
