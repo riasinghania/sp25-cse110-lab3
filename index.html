@@ -1,116 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Meeting Notes</title>
-    <meta name="description" content="A simple webpage for documenting meeting notes.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <header>
-      <h1>Weekly Meeting Notes</h1>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>Meeting Notes</title>
+  <meta name="description" content="A simple webpage for documenting meeting notes.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
 
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Past Meetings</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Internal CSS example -->
+  <style>
+    h2 {
+      background-color: #e0f7fa;
+      text-align: center;
+    }
+  </style>
+</head>
 
-    <main>
-      <section>
-        <h2>Meeting: April 8, 2025</h2>
-        <div>
-          <h3>Attendees</h3>
-          <p><span>Ria</span>, <span>Zoya</span>, <span>Neeka</span></p>
-        </div>
+<body>
+  <header class="sticky-header">
+    <h1 id="main-title">Weekly Meeting Notes</h1>
+  </header>
 
-        <hr>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Past Meetings</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-        <div>
-          <h3>Agenda</h3>
-          <ul>
-            <li><b>Project updates</b> – Team leads shared their current progress.</li>
-            <li><strong>Upcoming deadlines</strong> – Final draft due by Friday.</li>
-            <li><i>Client feedback</i> – Discussed minor UI changes.</li>
-            <li><em>Please prepare your sections by Thursday</em></li>
-          </ul>
-        </div>
+  <main>
+    <section class="highlight">
+      <h2>Meeting: April 8, 2025</h2>
 
-        <hr>
+      <div>
+        <h3>Attendees</h3>
+        <p><span>Ria</span>, <span>Zoya</span>, <span>Neeka</span></p>
+      </div>
 
-        <div>
-          <h3>Action Items</h3>
-          <ol>
-            <li>Ria to <strong>finalize the design doc</strong> by <em>Friday</em>.</li>
-            <li>Neeka to <b>schedule the next check-in</b> meeting by Thursday.</li>
-            <li>Zoya to summarize <i>feedback</i> from <a href="https://clientsite.com">client site</a>.</li>
-          </ol>
-          <p>Note: <strong>All team members</strong> must update the shared doc by tomorrow.<br>
-          If you have any questions, contact the project lead.</p>
-        </div>
+      <hr>
 
-        <!-- Interactive element: collapsible meeting summary -->
-        <details>
-          <summary>Click to view a detailed summary of the meeting</summary>
-          <p>This meeting focused on finalizing deliverables for the client and resolving outstanding questions around UI improvements. The team aligned on timelines and addressed some initial feedback. Everyone left with clear action items for the next sprint.</p>
-        </details>
-      </section>
-    </main>
+      <div>
+        <h3>Agenda</h3>
+        <ul>
+          <li><b>Project updates</b> – Team leads shared their current progress.</li>
+          <li><strong>Upcoming deadlines</strong> – Final draft due by Friday.</li>
+          <li><i>Client feedback</i> – Discussed minor UI changes.</li>
+          <li><em>Please prepare your sections by Thursday</em></li>
+        </ul>
+      </div>
 
-    <footer>
-      <p>&copy; 2025 Meeting Notes Webpage</p>
-    </footer>
+      <hr>
 
-<section>
-    <h2>Media Section</h2>
+      <div>
+        <h3>Action Items</h3>
+        <ol>
+          <li>Ria to <strong>finalize the design doc</strong> by <em>Friday</em>.</li>
+          <li>Neeka to <b>schedule the next check-in</b> meeting by Thursday.</li>
+          <li>Zoya to summarize <i>feedback</i> from <a href="https://clientsite.com">client site</a>.</li>
+        </ol>
+        <p class="text-demo">Note: <strong>All team members</strong> must update the shared doc by tomorrow.<br>
+        If you have any questions, contact the project lead.</p>
+      </div>
+
+      <!-- Pseudo-class example -->
+      <details>
+        <summary>Click to view a detailed summary of the meeting</summary>
+        <p>This meeting focused on finalizing deliverables for the client and resolving outstanding questions around UI improvements. The team aligned on timelines and addressed some initial feedback. Everyone left with clear action items for the next sprint.</p>
+      </details>
+    </section>
+
+    <!-- Flexbox Example -->
+    <section class="flex-container">
+      <div class="flex-item">Summary Block</div>
+      <div class="flex-item">Progress Tracker</div>
+      <div class="flex-item">Next Steps</div>
+    </section>
+
+    <!-- Grid Example -->
+    <section class="grid-container">
+      <div>Grid Item 1</div>
+      <div>Grid Item 2</div>
+      <div>Grid Item 3</div>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+      <h2>Media Section</h2>
 
       <h3>Image</h3>
-        <img src="screenshots/image.png" alt="UCSD" width="300">
+      <img src="screenshots/image.png" alt="UCSD" width="300">
 
       <h3>Audio</h3>
-        <audio controls>
+      <audio controls>
         <source src="screenshots/audio.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
       </audio>
 
       <h3>Video</h3>
-        <video width="400" controls>
-        <source src="screenshots/video.mp4" type= "video/mp4">
+      <video width="400" controls>
+        <source src="screenshots/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-</section>
-   <!-- FORM SECTION -->
-<footer>
-  <h2>Student Information Form</h2>
-  <form>
-    <fieldset>
-      <legend>Student ID Info</legend>
+    </section>
 
-      <label for="name">Full Name:</label><br>
-      <input type="text" id="name" name="name"><br><br>
+    <!-- Form Section -->
+    <section>
+      <h2>Student Information Form</h2>
+      <form>
+        <fieldset>
+          <legend>Student ID Info</legend>
 
-      <label for="dob">Date of Birth:</label><br>
-      <input type="date" id="dob" name="dob"><br><br>
+          <label for="name">Full Name:</label><br>
+          <input type="text" id="name" name="name"><br><br>
 
-      <label for="major">Major:</label><br>
-      <input type="text" id="major" name="major"><br><br>
+          <label for="dob">Date of Birth:</label><br>
+          <input type="date" id="dob" name="dob"><br><br>
 
-      <p>Residency Status:</p>
-      <input type="radio" id="instate" name="residency" value="instate">
-      <label for="instate">In-State</label><br>
+          <label for="major">Major:</label><br>
+          <input type="text" id="major" name="major"><br><br>
 
-      <input type="radio" id="outofstate" name="residency" value="outofstate">
-      <label for="outofstate">Out-of-State</label><br><br>
-    </fieldset>
+          <p>Residency Status:</p>
+          <input type="radio" id="instate" name="residency" value="instate">
+          <label for="instate">In-State</label><br>
 
-    <button type="submit">Submit</button>
-  </form>
+          <input type="radio" id="outofstate" name="residency" value="outofstate">
+          <label for="outofstate">Out-of-State</label><br><br>
+        </fieldset>
 
-  <p>&copy; 2025 Meeting Notes Webpage</p>
-</footer>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Meeting Notes Webpage</p>
+  </footer>
 </body>
 </html>
+
 
 
 
